@@ -1,3 +1,7 @@
+<?php
+    include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,73 +37,26 @@
                 </div>
 
             <div class = "special-list row g-0">
+                <?php
+                  $data = $db->query("SELECT * FROM daftar_produk");
+                  foreach($data as $produk) {
+                ?>
                 <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
                     <div class = "special-img position-relative overflow-hidden">
-                        <img src = "foto/kaos pendek.jpeg" class = "w-100">
+                        <img src = "foto/<?= $produk['foto_produk']; ?>" class = "w-100">
                         
                         </span>
                     </div>
                     <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">Kaos Lengan Pendek</p>
-                        <span class = "fw-bold d-block">Rp. 200.000</span>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <p class = "text-capitalize mt-3 mb-1"><?= $produk['nama_produk']; ?></p>
+                        <span class = "fw-bold d-block">Rp. <?= number_format($produk['harga'],2,',','.'); ?></span>
+                        <!-- <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a> -->
                         
                     </div>
                 </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "foto/kaos panjang 1.jpeg" class = "w-100">
-                        
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">Kaos Lengan Panjang</p>
-                        <span class = "fw-bold d-block">Rp. 150.000</span>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        
-                    </div>
-                </div>
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "foto/kaos panjang 1.jpeg" class = "w-100">
-                        
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">Kaos Lengan Panjang</p>
-                        <span class = "fw-bold d-block">Rp. 150.000</span>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        
-                    </div>
-                </div>
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "foto/kaos panjang 1.jpeg" class = "w-100">
-                        
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">Kaos Lengan Panjang</p>
-                        <span class = "fw-bold d-block">Rp. 150.000</span>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        
-                    </div>
-                </div>
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "foto/kaos panjang 1.jpeg" class = "w-100">
-                        
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">Kaos Lengan Panjang</p>
-                        <span class = "fw-bold d-block">Rp. 150.000</span>
-                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                        
-                    </div>
-                </div>
-</section>
+                <?php } ?>
+            </div>
+    </section>
 
     <!-- end of special products -->
     
@@ -124,7 +81,7 @@
     <!-- end of about us -->
 
    <?php 
-   include "footer.php";
+   include "footer_front.php";
    ?>
 
 

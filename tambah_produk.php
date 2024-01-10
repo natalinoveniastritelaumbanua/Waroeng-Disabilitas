@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if ($_SESSION['logged_in'] == FALSE) {
+      header("Location: login.php");
+      exit();
+    }
     include 'header.php';
     include 'sidebar.php';
 ?>
@@ -48,7 +53,7 @@
                 </div>
               </div><!-- /.card-header -->
               <div class="card-body">
-              <form action="tambah_produk_aksi.php" method="POST">
+              <form action="tambah_produk_aksi.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="nama_produk">Nama Produk</label>
                   <input type="text" id="nama_produk" name="nama_produk"
@@ -69,7 +74,7 @@
 
                 <div class="form-group">
                   <label for="foto">Foto Produk</label>
-                  <input type="text" id="foto" name="foto"
+                  <input type="file" id="foto" name="foto"
                   class="form-control">
                 </div>
 
@@ -103,4 +108,4 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <?php include 'footer.php';?>
+  <?php include 'footer_back.php';?>

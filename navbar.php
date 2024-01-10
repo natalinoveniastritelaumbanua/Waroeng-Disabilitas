@@ -30,7 +30,7 @@
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href = "Product.php">Product</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Category
                         </a>
@@ -40,12 +40,12 @@
                           <li><a class="dropdown-item" href="#">Kaos lengan panjang</a></li>
                           <li><a class="dropdown-item" href="#">Tunik</a></li>
                         </ul>
-                      </li>
+                      </li> -->
                     <li class = "nav-item px-2 py-2">
                         <a class = "nav-link text-uppercase text-dark" href = "About.php">About Us</a>
                     </li>
                     <li class = "nav-item px-2 py-2">
-                        <a class = "nav-link text-uppercase text-dark" href = "Contact.php">Contact</a>
+                        <a class = "nav-link text-uppercase text-dark" href = "login.php">Admin</a>
                     </li>
                    
                 </ul>

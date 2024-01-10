@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if ($_SESSION['logged_in'] == FALSE) {
+      header("Location: login.php");
+      exit();
+    }
     include 'header.php';
     include 'sidebar.php';
 ?>
@@ -68,29 +73,22 @@
                 <div class="form-group">
                   <label for="nama_produk">Nama Produk</label>
                   <input type="text" id="nama_produk" name="nama_produk"
-                  class="form-control">
+                  class="form-control"
                   value="<?= $produk['id_produk']?>">
                 </div>
 
                 <div class="form-group">
                   <label for="harga">Harga</label>
                   <input type="number" id="harga" name="harga"
-                  class="form-control">
+                  class="form-control"
                   value="<?= $produk['harga']?>">
                 </div>
 
                 <div class="form-group">
                   <label for="deskripsi">Deskripsi</label>
                   <textarea id="deskripsi" name="deskripsi"
-                  class="form-control" rows="5"><?= $produk['deskripsi']?>">
+                  class="form-control" rows="5"><?= $produk['deskripsi']?>
                 </textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="foto">Foto Produk</label>
-                  <input type="text" id="foto" name="foto"
-                  class="form-control">
-                  value="<?= $produk['foto_produk']?>">
                 </div>
 
                 <div class="form-group">
@@ -123,4 +121,4 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <?php include 'footer.php';?>
+  <?php include 'footer_back.php';?>

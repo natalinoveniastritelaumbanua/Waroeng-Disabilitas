@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if ($_SESSION['logged_in'] == FALSE) {
+      header("Location: login.php");
+      exit();
+    }
+
     include 'header.php';
     include 'sidebar.php';
 ?>
@@ -71,11 +77,13 @@
                           <td><?= $produk['nama_produk']; ?></td>
                           <td><?= $produk['harga']; ?></td>
                           <td><?= $produk['deskripsi']; ?></td>
-                          <td><?= $produk['foto_produk']; ?></td>
+                          <td>
+                            <img src = "foto/<?= $produk['foto_produk']; ?>" height="50px">  
+                          </td>
                           <td><?= $produk['status_produk']; ?></td>
                           <td>
                             <a href="ubah_produk.php?id_produk=<?= $produk['id_produk'] ?>" 
-                              class="btn btn-sm btn-warning"
+                              class="btn btn-sm btn-warning">
                             <i class="fas fa-edit mr-1"></i>Ubah</a>
 
                             <a href="hapus_produk_aksi.php?id_produk=<?= $produk['id_produk'] ?>" 
@@ -102,4 +110,4 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <?php include 'footer.php';?>
+  <?php include 'footer_back.php';?>
