@@ -1,4 +1,5 @@
- <!-- footer -->
+<!-- footer -->
+
  <footer class = "bg-dark py-5">
         <div class = "container-fluid">
             <div class = "row text-white g-4">
@@ -75,6 +76,7 @@
         </div>
     </footer>
     <!-- end of footer -->
+
      <!-- jquery -->
      <script src = "js/jquery-3.6.0.js"></script>
     <!-- isotope js -->
@@ -83,3 +85,4 @@
     <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <!-- custom js -->
     <script src = "js/script.js"></script>
+

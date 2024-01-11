@@ -29,8 +29,11 @@
                 <div class = "title pt-3 pb-5">
                     <h2 class = "position-relative d-inline-block ms-4">About Us</h2>
                 </div>
-                <p class = "lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ipsam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fuga blanditiis, modi exercitationem quae quam eveniet! Minus labore voluptatibus corporis recusandae accusantium velit, nemo, nobis, nulla ullam pariatur totam quos.</p>
+                <p class = "lead text-muted">Waroeng Disabilitas Sasirangan adalah tempat yang menggabungkan seni, budaya, dan inklusivitas dengan fokus pada pengolahan kain sasirangan.</p>
+                <p>Wadah untuk orang disabilitas dapat mengembangkan bakat dan membuka lapangan kerja untuk orang disabilitas. Produk yang dihasilkan oleh Waroeng Disabilitas adalah pakaian khas Kalimantan Selatan yaitu Sasirangan. 
+                        Sasirangan ini dibuat langsung oleh teman-teman disabilitas mulai dari mendesain pola, menjahit dan menjelujur hingga mewarnai kain. Di Waroeng Disabilitas menjual berbagai jenis produk seperti Kain Sasirangan, 
+                        Baju Atasan dari lengan pendek hingga panjang, juga berbagai jenis produk lainnya. Ketika ada event Waroeng Disabilitas juga akan berpartisipasi dalam acara tersebut untuk mengenalkan hasil karya mereka. 
+                        Ketika ada kesempatan juga, para teman-teman disabilitas akan menjadi model untuk menampilkan karyanya.</p>
                 
             </div>
             <div class = "col-lg-6 order-lg-0">

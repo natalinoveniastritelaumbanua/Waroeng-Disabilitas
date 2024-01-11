@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-<?php 
-$db = mysqli_connect("localhost","root","",'db_sasirangan', 3307);
-=======
+<?php
 
-<?php 
-$db = mysqli_connect("localhost","root@localhost","",'db_sasirangan', 3307);
->>>>>>> c4de2037e7b589c25d6f8d1cb9199c480720bb0a
+$server = "localhost";
+$username = "root";
+$password = "1234";
+$database_name = "db_sasirangan";
+
+$db = mysqli_connect($server, $username, $password, $database_name);
 if(!$db) {
     die("Tidak bisa Terhubung = " .mysqli_connect_error());}
 ?>

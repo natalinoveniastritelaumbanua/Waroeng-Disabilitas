@@ -3,7 +3,7 @@
 :root{
     --lg-font: 'Kaisei Tokumin', serif;
     --sm-font: 'Poppins', sans-serif;
-    --pink: #ceeb57;
+    --pink: #2093e5;
 }
 body{
     font-family: var(--sm-font);
@@ -15,7 +15,7 @@ body{
 }
 
 .btn:not(.nav-btns button){
-    background-color: #ffff;
+    background-color: #f7f8fa;
     color: rgb(85, 85, 85);
     padding: 10px 28px;
     border-radius: 25px;
@@ -54,7 +54,7 @@ body{
 
 /* header */
 #header{
-    background: url(../images/banner-img-1.jpg) top/cover no-repeat;
+    background: url(../foto/Banner\ Waroeng\ Disabilitas.png) top/cover no-repeat;
 }
 .carousel-inner h1{
     font-size: 60px;
@@ -119,7 +119,7 @@ body{
 
 /* offers */
 #offers{
-    background: url(../images/offer_img.jpg) center/cover no-repeat;
+    background: url() center/cover no-repeat;
 }
 #offers .row{
     min-height: 60vh;
@@ -186,7 +186,7 @@ footer a:hover{
 }
 
 .nav-link:hover
-   { background-color: dodgerblue;
+   { background-color: rgb(237, 240, 243);
     
 }
 
