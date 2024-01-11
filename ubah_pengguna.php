@@ -45,49 +45,51 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
-                  <i class="fas fa-users mr-1"></i>
-                  Pengguna
+                  <i class="fas fa-edit mr-1"></i>
+                  Formulir Ubah Pengguna
                 </h3>
                 <div class="card-tools">
-                  <a class="btn btn-primary" href="tambah_pengguna.php">
-                    <i class="fas fa-plus mr-1"></i>Tambah</a>
+          
                 </div>
               </div><!-- /.card-header -->
               <div class="card-body">
-                <?php
+                <?php 
                   include 'koneksi.php';
-                  $data = $db->query("SELECT * FROM pengguna");
-                ?>
-                <table class="table">
-                  <tr>
-                    <th>No.</th>
-                    <th>username</th>
-                    <th>password</th>
-                    <th>aksi</th>
-                    
-                  </tr>
-                  <?php 
-                    $no = 1;
-                    foreach($data as $pengguna) {?>
-                        <tr>
-                          <td><?= $no++; ?></td>
-                          <td><?= $pengguna['username']; ?></td>
-                          <td><?= $pengguna['password']; ?></td>
-            
-                          <td>
-                            <a href="ubah_pengguna.php?username=<?= $pengguna['username'] ?>" 
-                              class="btn btn-sm btn-warning">
-                            <i class="fas fa-edit mr-1"></i>Ubah</a>
+                  //mengambil ID dari GET
+                  $username = $_GET['username'];
 
-                            <a href="hapus_pengguna_aksi.php?username=<?= $pengguna['username'] ?>" 
-                              class="btn btn-sm btn-danger"
-                              onclick='return-confirm("Yakin hapus?")'>
-                            <i class="fas fa-trash mr-1"></i>Hapus</a>
-                          </td>
-                        </tr>
-                   <?php } ?>
-                  
-                </table>
+                  //megambil data dari database
+                  $hasil = $db->query("SELECT * FROM pengguna
+                  where username = '$username'");
+
+                //data yang diambil diubah menjadi array
+                  $pengguna = $hasil->fetch_assoc();
+                ?>
+
+              <form action="ubah_pengguna_aksi.php" method="POST">
+                <input type="hidden" name="husername" 
+                value="<?= $pengguna['username']?>">
+
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" name="username"
+                  class="form-control"
+                  value="<?= $pengguna['username']?>" readonly>
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password"
+                  class="form-control"
+                  value="<?= $pengguna['password']?>">
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                  <a href="pengguna.php" class="btn btn-danger">Kembali</a>
+                </div>
+
+              </form>
               </div><!-- /.card-body -->
             </div>
             <!-- /.card -->

@@ -1,3 +1,7 @@
+<?php
+    include 'koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,6 +49,7 @@
                     
                 </div>
 
+<<<<<<< HEAD
                 <div class="special-list row g-0">
                     <!-- Misalnya Anda telah mengambil data produk dari database dan menyimpannya dalam array $produk -->
                     <?php foreach ($produk as $item) { ?>
@@ -66,6 +71,28 @@
                             </div>
                         </div>
                     <?php } ?>
+=======
+            <div class = "special-list row g-0">
+                <?php
+                  $data = $db->query("SELECT * FROM daftar_produk");
+                  foreach($data as $produk) {
+                ?>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "foto/<?= $produk['foto_produk']; ?>" class = "w-100">
+                        
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1"><?= $produk['nama_produk']; ?></p>
+                        <span class = "fw-bold d-block">Rp. <?= number_format($produk['harga'],2,',','.'); ?></span>
+                        <!-- <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a> -->
+                        
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa
     </section>
 
     <!-- end of special products -->
@@ -93,9 +120,15 @@
     </section>
     <!-- end of about us -->
 
+<<<<<<< HEAD
     <?php
     include "footer.php";
     ?>
+=======
+   <?php 
+   include "footer_front.php";
+   ?>
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa
 
 
 

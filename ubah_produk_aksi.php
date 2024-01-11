@@ -7,7 +7,6 @@
     $nama_produk = $_POST['nama_produk'];
     $harga = $_POST['harga'];
     $deskripsi = $_POST['deskripsi'];
-    $foto = $_POST['foto'];
     $status = $_POST['status'];
 
     //insert ke dalam database
@@ -15,7 +14,6 @@
         nama_produk = '$nama_produk',
         harga = $harga,
         deskripsi = '$deskripsi',
-        foto_produk = '$foto',
         status_produk = '$status'
         WHERE id_produk = $id_produk");
 

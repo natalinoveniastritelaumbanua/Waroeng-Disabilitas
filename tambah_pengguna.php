@@ -15,7 +15,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Daftar Pengguna</h1>
+            <h1 class="m-0">Tambah Pengguna</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -45,49 +45,33 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
-                  <i class="fas fa-users mr-1"></i>
-                  Pengguna
+                  <i class="fas fa-plus mr-1"></i>
+                  Formulir Tambah Pengguna
                 </h3>
                 <div class="card-tools">
-                  <a class="btn btn-primary" href="tambah_pengguna.php">
-                    <i class="fas fa-plus mr-1"></i>Tambah</a>
+          
                 </div>
               </div><!-- /.card-header -->
               <div class="card-body">
-                <?php
-                  include 'koneksi.php';
-                  $data = $db->query("SELECT * FROM pengguna");
-                ?>
-                <table class="table">
-                  <tr>
-                    <th>No.</th>
-                    <th>username</th>
-                    <th>password</th>
-                    <th>aksi</th>
-                    
-                  </tr>
-                  <?php 
-                    $no = 1;
-                    foreach($data as $pengguna) {?>
-                        <tr>
-                          <td><?= $no++; ?></td>
-                          <td><?= $pengguna['username']; ?></td>
-                          <td><?= $pengguna['password']; ?></td>
-            
-                          <td>
-                            <a href="ubah_pengguna.php?username=<?= $pengguna['username'] ?>" 
-                              class="btn btn-sm btn-warning">
-                            <i class="fas fa-edit mr-1"></i>Ubah</a>
+              <form action="tambah_pengguna_aksi.php" method="POST">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" id="username" name="username"
+                  class="form-control">
+                </div>
 
-                            <a href="hapus_pengguna_aksi.php?username=<?= $pengguna['username'] ?>" 
-                              class="btn btn-sm btn-danger"
-                              onclick='return-confirm("Yakin hapus?")'>
-                            <i class="fas fa-trash mr-1"></i>Hapus</a>
-                          </td>
-                        </tr>
-                   <?php } ?>
-                  
-                </table>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password"
+                  class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                  <a href="pengguna.php" class="btn btn-danger">Kembali</a>
+                </div>
+
+              </form>
               </div><!-- /.card-body -->
             </div>
             <!-- /.card -->

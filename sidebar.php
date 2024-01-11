@@ -14,7 +14,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?= $_SESSION['username']; ?></a>
         </div>
       </div>
 
@@ -23,18 +23,18 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="pages/gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Beranda
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-header">MASTER DATA</li>
           <li class="nav-item">
             <a href="daftar_produk.php" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fa fa-list"></i>
               <p>
                 Produk
               </p>
@@ -42,7 +42,7 @@
           </li>
           <li class="nav-item">
             <a href="pengguna.php" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fa fa-users"></i>
               <p>
                 Pengguna
               </p>
@@ -50,8 +50,8 @@
           </li>
           <li class="nav-header">TOOLS</li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+            <a href="logout.php" class="nav-link">
+              <i class="nav-icon fa fa-circle"></i>
               <p>
                 Logout
               </p>

@@ -1,7 +1,17 @@
 <?php
+<<<<<<< HEAD
 include 'header.php';
 include 'sidebar.php';
 include 'koneksi.php';
+=======
+    session_start();
+    if ($_SESSION['logged_in'] == FALSE) {
+      header("Location: login.php");
+      exit();
+    }
+    include 'header.php';
+    include 'sidebar.php';
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -24,6 +34,7 @@ include 'koneksi.php';
   </div>
   <!-- /.content-header -->
 
+<<<<<<< HEAD
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
@@ -49,6 +60,33 @@ include 'koneksi.php';
               </div>
             </div><!-- /.card-header -->
             <div class="card-body">
+=======
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-12 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-plus mr-1"></i>
+                  Formulir Tambah Produk
+                </h3>
+                <div class="card-tools">
+          
+                </div>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa
               <form action="tambah_produk_aksi.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="nama_produk">Nama Produk</label>
@@ -67,7 +105,12 @@ include 'koneksi.php';
 
                 <div class="form-group">
                   <label for="foto">Foto Produk</label>
+<<<<<<< HEAD
                   <input type="file" id="foto" name="foto" class="form-control">
+=======
+                  <input type="file" id="foto" name="foto"
+                  class="form-control">
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa
                 </div>
 
                 <div class="form-group">
@@ -92,6 +135,7 @@ include 'koneksi.php';
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
 
+<<<<<<< HEAD
       </div>
       <!-- /.row (main row) -->
     </div><!-- /.container-fluid -->
@@ -101,3 +145,6 @@ include 'koneksi.php';
 <!-- /.content-wrapper -->
 
 <?php include 'footer.php'; ?>
+=======
+  <?php include 'footer_back.php';?>
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa

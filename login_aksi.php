@@ -15,5 +15,10 @@
         $_SESSION['logged_in'] = TRUE;
         header('location: daftar_produk.php');
     } else {
+<<<<<<< HEAD
         header('location: login.php'); }
+=======
+        header('location: login.php');
+    }
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa
 ?>

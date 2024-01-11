@@ -1,4 +1,8 @@
+<<<<<<< HEAD:footer.php
 <!-- footer -->
+=======
+ <!-- footer -->
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa:footer_front.php
  <footer class = "bg-dark py-5">
         <div class = "container-fluid">
             <div class = "row text-white g-4">
@@ -75,4 +79,15 @@
         </div>
     </footer>
     <!-- end of footer -->
+<<<<<<< HEAD:footer.php
 
+=======
+     <!-- jquery -->
+     <script src = "js/jquery-3.6.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
+>>>>>>> 6fa0c46c0c5fe0d66aa77014c174a5793b072dfa:footer_front.php
