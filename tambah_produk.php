@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
     session_start();
     if ($_SESSION['logged_in'] == FALSE) {
       header("Location: login.php");
@@ -7,11 +7,11 @@
     }
     include 'header.php';
     include 'sidebar.php';
-=======
+
 include 'header.php';
 include 'sidebar.php';
 include 'koneksi.php';
->>>>>>> be4c5b6 (perubahan)
+
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -34,7 +34,6 @@ include 'koneksi.php';
   </div>
   <!-- /.content-header -->
 
-<<<<<<< HEAD
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -60,7 +59,7 @@ include 'koneksi.php';
                 </div>
               </div><!-- /.card-header -->
               <div class="card-body">
-=======
+
   <!-- Main content -->
   <section class="content">
     <div class="container-fluid">
@@ -86,7 +85,7 @@ include 'koneksi.php';
               </div>
             </div><!-- /.card-header -->
             <div class="card-body">
->>>>>>> be4c5b6 (perubahan)
+
               <form action="tambah_produk_aksi.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="nama_produk">Nama Produk</label>
@@ -105,12 +104,12 @@ include 'koneksi.php';
 
                 <div class="form-group">
                   <label for="foto">Foto Produk</label>
-<<<<<<< HEAD
+
                   <input type="file" id="foto" name="foto"
                   class="form-control">
-=======
+
                   <input type="file" id="foto" name="foto" class="form-control">
->>>>>>> be4c5b6 (perubahan)
+
                 </div>
 
                 <div class="form-group">
@@ -135,9 +134,9 @@ include 'koneksi.php';
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
 
-<<<<<<< HEAD
+
   <?php include 'footer_back.php';?>
-=======
+
       </div>
       <!-- /.row (main row) -->
     </div><!-- /.container-fluid -->
@@ -147,4 +146,4 @@ include 'koneksi.php';
 <!-- /.content-wrapper -->
 
 <?php include 'footer.php'; ?>
->>>>>>> be4c5b6 (perubahan)
+

@@ -87,7 +87,7 @@
                 <h2 class="position-relative d-inline-block">PRODUCT</h2>
             </div>
 
-<<<<<<< HEAD
+
             <div class = "special-list row g-0">
                 <?php
                   include 'koneksi.php';
@@ -109,7 +109,7 @@
                 </div>
                 <?php } ?>
             </div>
-=======
+
             <div class="row g-0">
                 <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
                     
@@ -139,7 +139,7 @@
     </section>
 
     <!-- end of special products -->
->>>>>>> be4c5b6 (perubahan)
+
 
     <!-- end of special products -->
    

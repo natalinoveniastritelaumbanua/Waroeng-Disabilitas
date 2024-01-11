@@ -70,4 +70,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Gagal mengunggah file. Pastikan folder 'images' dapat ditulisi.";
     }
 }
->>>>>>> be4c5b6 (perubahan)
+
